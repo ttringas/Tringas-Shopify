@@ -77,6 +77,11 @@ div#bg {
 	background: #fff;
 	padding-top: 10px;
 	position: relative;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	
+	
 }
 
 div#sortable {
@@ -95,9 +100,9 @@ div#main {
 
 div#sidebar-right {
 	width: 200px;
-	margin-left: -10px;
 	position: relative;
 	float: right;
+	margin-right: -15px;
 }
 
 div#sidebar-left {
@@ -124,7 +129,6 @@ div#sidebar-left {
 }
 
 a {
-	color: #53c200;
 	text-decoration: none;
 }
 
@@ -329,8 +333,6 @@ ul#products li, ul#results li, div#images li {
 	width: 160px;
 	padding: 15px 5px 18px;
 	float: left;
-	border-bottom: 1px solid #e3e3e3;
-	border-right: 1px solid #e3e3e3;
 }
 
 ul#products li.end, ul#results li.end, div#images li.end {
@@ -436,7 +438,6 @@ div#paginate a {
 }
 
 div#paginate span.current {
-	color: #53c200;
 	font-weight: bold;
 	padding: 0 3px;
 }
@@ -450,7 +451,7 @@ div#product div#heading h1 {
 }
 
 div#product div#heading h2 {
-	color: #53c200;
+	color: #555;
 	font-size: 24px;
 	padding-bottom: 13px;
 }
@@ -724,6 +725,7 @@ div#notes textarea {
 div#checkout {
 	width: 318px;
 	float: right;
+	margin: 15px 0px;
 }
 
 div#checkout input {
@@ -943,7 +945,7 @@ div.filter li {
 }
 
 div.filter li a {
-	color: #251f1e;
+	color: #FFF;
 	width: 150px;
 	padding: 4px 10px;
 	border-bottom: 1px solid #e3e3e3;
@@ -1067,10 +1069,16 @@ div#store-info{
 	padding: 10px;
 	width: 180px;
 	font-weight: bold;
+	color: #FFF;
+	background: #333;
+	margin-right: -15px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 
 div#store-info a {
-	color: #444;
+	color: #FFF;
 }
 
 div#store-info a:hover {
@@ -1081,15 +1089,22 @@ div#store-info a:hover {
 div#store-info th {
     padding: 20px 10px;
     font-weight: bold;
+	border: none;
 }    
+
+div#store-info tr {
+	border: none;
+}
 
 div#store-info td {
     padding: 5px 10px;
+	border: none;
 }
 
 div#store-info td.small {
     font-size: 75%;
 	padding: 12px 10px 0px 10px;
+	border: none;
 }
 
 
@@ -1172,5 +1187,26 @@ div#footer p.links a {
 }
 
 /* @end */
+
+/* Custom buttons */
+
+a.orange-button {
+	float: right;
+	background: #ED980D;
+	color: #333;
+	font-size: 22px;
+	padding: 15px 50px;
+	margin: 10px 0;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-weight: bold;
+	border: solid 1px #777;
+}
+
+a.orange-button:hover {
+	color: #333;
+	background: #D4860D;
+}
 
 /* End Stylesheet */

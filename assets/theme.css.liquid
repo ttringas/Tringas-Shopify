@@ -43,54 +43,12 @@ div#promo p {
 	color: {{ settings.promo_text_color }};
 }
 
-
-ul#products li, ul#results li, div#images li {
-	border-bottom: 1px solid {{ settings.borders_color }};
-	border-right: 1px solid {{ settings.borders_color }};
-}
-
-ul#products li h3 a, ul#results li h3 a {
-	color: {{ settings.text_color }};
-}
-
-ul#products li h4 del, ul#results li h4 del {
-	color: {{ settings.text_accent_color }};
-}
-
-ul#products li h5, ul#results li h5 {
-	background: url({{ settings.view_image | asset_url }}) no-repeat 10px 0;
-}
-
-ul#products li h5 a, ul#results li h5 a {
-	background: url({{ settings.view_image | asset_url }}) no-repeat;
-}
-
-ul#results div.desc, div#images h6, div#total h3, div.entry, div#comments h3, div.filter p {
-	border-bottom: 1px solid {{ settings.borders_color }};
-}
-
-div#paginate a, div#product div#heading h2 del, div.entry div.title h2 a {
-	color: {{ settings.text_color }};
-}
-
-div#paginate span.current, div#product div#heading h2, div.entry div.title h5 span, div#comments p#posted, div#comments p#error {
-	color: {{ settings.link_color }};
-}
-
 div#options form {
 	background-color: {{ settings.variants_bg_color }};
 }
 
 div#variants label, div#options h6 {
 	color: {{ settings.variants_text_color }};
-}
-
-div#cart th, div#cart td {
-	border-bottom: 1px solid {{ settings.cart_row_border_color }};
-}
-
-div#cart tr.odd td {
-	background-color: {{ settings.cart_odd_bg_color }};
 }
 
 div#cart tr.odd td.pic img {
