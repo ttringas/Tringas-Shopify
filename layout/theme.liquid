@@ -21,18 +21,18 @@
 		<div class="container">
 			<!-- START TITLE -->
 			<div id="title" class="clear">
-				<!-- START LOGO -->{% if settings.logo == "enabled" %}
-				<div id="logo">
-					<a href="/"><img src="{{ "logo.png" | asset_url }}" alt="{{ shop.name | escape }}" /></a>
-				</div>{% else %}
-				<h2><a href="/">{{ shop.name | escape }}</a></h2>{% endif %}
-				<!-- END LOGO -->
 				<!-- START GOCART -->
 				<div id="gocart">
 					<p>Your Cart: <a href="/cart">{{ cart.item_count }} {{ cart.item_count | pluralize: "Item", "Items" }} for {{ cart.total_price | money }}</a></p>
 					<p id="button"><a href="/cart">Checkout</a></p>
 				</div>
 				<!-- END GOCART -->
+				<!-- START LOGO -->
+				<div id="logo">
+					<a href="/"><img src="{{ "logo.png" | asset_url }}" alt="{{ shop.name | escape }}" /></a>
+					<h2>Tringas Music</h2><h3>(800) 337-0703</h3>
+				</div>
+				<!-- END LOGO -->
 			</div>
 			<!-- END TITLE -->
 			<!-- START NAV -->
@@ -42,6 +42,13 @@
 				</ul>
 			</div>
 			<!-- END NAV -->
+			<div id="go">
+				<form method="get" action="/search">
+					<input type="text" name="q" value="{% if search.performed %}{{ search.terms | escape | downcase }}{% else %}Search...{% endif %}" class="field" /> 
+					<input type="image" src="{{ settings.finder_go_image | asset_url }}" alt="Go" />
+				</form>
+			</div>
+			<!-- END GO -->
 			<!-- START FINDER -->
 			<div id="finder" class="clear">{% if settings.promo == "enabled" %}
 				<!-- START PROMO -->
@@ -50,13 +57,6 @@
 				</div>
 				<!-- END PROMO -->{% endif %}
 				<!-- START GO -->
-				<div id="go">
-					<form method="get" action="/search">
-						<input type="text" name="q" value="{% if search.performed %}{{ search.terms | escape | downcase }}{% else %}Search...{% endif %}" class="field" /> 
-						<input type="image" src="{{ settings.finder_go_image | asset_url }}" alt="Go" />
-					</form>
-				</div>
-				<!-- END GO -->
 			</div>
 			<!-- END FINDER -->
 		</div>
@@ -146,27 +146,28 @@
 								<div id="store-info">	
 									<table class="store-info">
 										<tr>
-											<th>Store Info</th>
+											<td class="small">Hours</td>
 										</tr>
 										<tr>
-											<td>Mon-Sat 10a-6p</td>
-										</tr>
-                                        <tr>
-                                        </tr>
-                                        <tr>
-    										<td>In Pensacola</td>
+											<td>Mon - Sat 10am - 6pm</td>
 										</tr>
 										<tr>
-											<td>(850) 477-2210</td>
+											<td class="small">Phone: In Pensacola</td>
 										</tr>
                                         <tr>
-        									<td>Outside Pensacola</td>
+    										<td>(850) 477-2210</td>
+										</tr>
+										<tr>
+											<td class="small">Phone: Toll free</td>
 										</tr>
 										<tr>
 											<td>(800) 337-0703</td>
 										</tr>
+										<tr>
+											<td class="small">Address</td>
+										</tr>
                                         <tr>
-                                            <td><a href= "http://maps.google.com/maps?q=1502+Creighton+Road,+Pensacola,+FL&hl=en&ll=30.499124,-87.211876&spn=0.057685,0.06815&sll=37.0625,-95.677068&sspn=53.696917,69.785156&z=14">1502 Creighton Rd.</a></td>
+                                            <td><a href= "http://maps.google.com/maps?q=1502+Creighton+Road,+Pensacola,+FL&hl=en&ll=30.499124,-87.211876&spn=0.057685,0.06815&sll=37.0625,-95.677068&sspn=53.696917,69.785156&z=14">1502 Creighton Rd (map)</a></td>
                                         </tr>
 									</table>
 								</div>

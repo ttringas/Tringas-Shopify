@@ -1,23 +1,5 @@
 /* Designed and hand-coded by http://www.pixellent.com. Copyright (c) Pixellent, LLC. All rights reserved. */
 
-body {
-	color: {{ settings.text_color }};
-	font-family: {{ settings.typography }};
-	background-color: {{ settings.overview_bg_color }};
-}
-
-div.content {
-	{% if settings.content_bg_image == "none" %}background-color: {{ settings.content_bg_color }};
-	{% else %}background: {{ settings.content_bg_color }} url({{ settings.content_bg_image | asset_url }}) {{ settings.content_bg_repeat }} {{ settings.content_bg_position }};{% endif %}
-}
-
-div#bg {
-	{% if settings.content_container_bg_image == "none" %}background-color: {{ settings.content_container_bg_color }};
-	{% else %}background: {{ settings.content_container_bg_color }};{% endif %}
-	border-right: 1px solid {{ settings.content_container_border_color }};
-	border-bottom: 1px solid {{ settings.content_container_border_color }};
-	border-left: 1px solid {{ settings.content_container_border_color }};
-}
 
 a {
 	color: {{ settings.link_color }};
@@ -25,12 +7,6 @@ a {
 
 a:hover {
 	color: {{ settings.link_hover }};
-}
-
-div#header {
-	{% if settings.header_bg_image == "none" %}background-image: none;
-	background-color: {{ settings.header_bg_color }};
-	{% else %}background: {{ settings.header_bg_color }} url({{ settings.header_bg_image | asset_url }}) {{ settings.header_bg_repeat }} {{ settings.header_bg_position }};{% endif %}
 }
 
 div#title h2 a, div#title h2 a:hover {
@@ -63,56 +39,10 @@ div#gocart p#button a, div#gocart p#button a:hover {
 	background: url({{ settings.gocart_image | asset_url }}) no-repeat;
 }
 
-div#nav {
-	{% if settings.nav_bg_image == "none" %}background-image: none;
-	background-color: {{ settings.nav_bg_color }};
-	{% else %}background: {{ settings.nav_bg_color }} url({{ settings.nav_bg_image | asset_url }}) {{ settings.nav_bg_repeat }} {{ settings.nav_bg_position }};{% endif %}
-}
-
-div#nav ul {
-	{% if settings.nav_border == "enabled" %}border-left: 1px solid {{ settings.nav_border_color }};{% else %}
-	border-left: none;{% endif %}
-}
-
-div#nav li a {
-	color: {{ settings.nav_link_color }};{% if settings.nav_link_bg == "enabled" %}
-	background-color: {{ settings.nav_link_bg_color }};{% endif %}{% if settings.nav_border == "enabled" %}
-	border-right: 1px solid {{ settings.nav_border_color }};{% endif %}
-}
-
-div#nav li a:hover {
-	color: {{ settings.nav_link_hover }};{% if settings.nav_link_hover_bg == "enabled" %}
-	background-color: {{ settings.nav_link_hover_bg_color }};{% endif %}
-}
-
-div#nav li a.active, div#nav li a.active:hover {
-	color: {{ settings.nav_active_link_color }};{% if settings.nav_active_link_bg == "enabled" %}
-	background-color: {{ settings.nav_active_link_bg_color }};{% endif %}
-}
-
-div#finder {
-	{% if settings.finder_bg_image == "none" %}background-image: none;
-	background-color: {{ settings.finder_bg_color }};
-	{% else %}background: {{ settings.finder_bg_color }} url({{ settings.finder_bg_image | asset_url }}) {{ settings.finder_bg_repeat }} {{ settings.finder_bg_position }};{% endif %}
-}
-
 div#promo p {
 	color: {{ settings.promo_text_color }};
 }
 
-div#go input.field {
-	color: {{ settings.finder_input_text_color }};
-	font: 13px {{ settings.typography }};{% if settings.finder_input_bg_image == "none" %}
-	background-image: none;
-	background-color: {{ settings.finder_input_bg_color }};{% else %}
-	background: {{ settings.finder_input_bg_color }} url({{ settings.finder_input_bg_image | asset_url }}) {{ settings.finder_input_bg_repeat }} {{ settings.finder_input_bg_position }};{% endif %}
-	border: 1px solid {{ settings.finder_input_border_color }};
-}
-
-div#intro, div#heading, div#collections-listing h2 {
-	{% if settings.heading_bg_image == "none" %}background-image: none;{% else %}background: #0F0F0F {{ settings.heading_bg_repeat }} {{ settings.heading_bg_position }};{% endif %}
-	border-bottom: 1px solid {{ settings.borders_color }};
-}
 
 ul#products li, ul#results li, div#images li {
 	border-bottom: 1px solid {{ settings.borders_color }};
@@ -184,27 +114,6 @@ div.comment div.bg, div#unfound {
 	background-color: {{ settings.comment_bg_color }};
 }
 
-div.filter h3 {
-	color: {{ settings.filter_text_color }};
-	background-color: {{ settings.filter_bg_color }};
-}
-
-div.filter ul, div.filter div {
-	background: url({{ settings.filter_bg_image | asset_url }}) no-repeat;
-}
-
-div.filter li a {
-	color: {{ settings.text_color }};
-	border-bottom: 1px solid {{ settings.borders_color }};
-}
-
-div.filter li a:hover {
-	color: {{ settings.text_accent_color }};
-}
-
-div.filter li a.active, div.filter li a.active:hover {
-	color: {{ settings.link_hover }};
-}
 
 div#sidebar div.bg {
 	background-color: {{ settings.sidebar_bg_color }};
@@ -212,19 +121,6 @@ div#sidebar div.bg {
 
 div#sidebar h3 {
 	color: {{ settings.sidebar_title_color }};
-	border-bottom: 1px solid {{ settings.sidebar_border_color }};
-}
-
-div#sidebar p {
-	color: {{ settings.sidebar_text_color }};
-}
-
-div#sidebar a {
-	color: {{ settings.sidebar_link_color }};
-}
-
-div#sidebar a:hover {
-	color: {{ settings.sidebar_link_hover_color }};
 }
 
 div#posts div.post, div#featured div.product {

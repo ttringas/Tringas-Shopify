@@ -53,10 +53,10 @@ input, select {
 /* @group Global */
 
 body {
-	color: #251f1e;
+	color: #444;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-align: center;
-	background-color: #3f4338;
+	background-color: #EDEDED;
 }
 
 div.container {
@@ -74,11 +74,8 @@ div.content {
 }
 
 div#bg {
-	background: #fff url(bg-default.png) repeat-x;
+	background: #fff;
 	padding-top: 10px;
-	border-right: 1px solid #cfcece;
-	border-bottom: 1px solid #cfcece;
-	border-left: 1px solid #cfcece;
 	position: relative;
 }
 
@@ -149,8 +146,13 @@ div#title {
 }
 
 div#title h2 {
-	font-size: 40px;
-	float: left;
+	font-size: 60px;
+	margin-left: 30px;	
+}
+
+div#title h3 {
+	font-size: 25px;
+	float: right;
 }
 
 div#title h2 a, div#title h2 a:hover {
@@ -158,12 +160,18 @@ div#title h2 a, div#title h2 a:hover {
 	text-decoration: none;
 }
 
+div#logo{
+	width: 500px;
+}
+
 div#logo, div#logo img {
 	float: left;
+	color: #444;
+	
 }
 
 div#gocart {
-	padding-top: 100px;
+	padding-top: 10px;
 	float: right;
 }
 
@@ -186,7 +194,6 @@ div#gocart p#button {
 }
 
 div#gocart p#button a, div#gocart p#button a:hover {
-	background: url(button-default.png) no-repeat;
 	width: 98px;
 	height: 0;
 	padding: 27px 0 0;
@@ -195,12 +202,17 @@ div#gocart p#button a, div#gocart p#button a:hover {
 }
 
 div#nav {
-	background: #595e53 url(nav-default.png) repeat-x;
+	background: #595E53;
 	padding: 0 25px;
+	width: 570px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	float: left;
+	
 }
 
 div#nav ul {
-	border-left: 1px solid #241f1d;
 }
 
 div#nav li {
@@ -212,22 +224,22 @@ div#nav li a {
 	font-size: 16px;
 	font-weight: bold;
 	padding: 9px 15px 7px;
-	border-right: 1px solid #241f1d;
 	float: left;
+	background: #595E53;
 }
 
 div#nav li a:hover {
-	color: #ddd;
+	color: #27D8CF;
+	background: #888;
 	text-decoration: none;
 }
 
 div#nav li a.active, div#nav li a.active:hover {
-	color: #fff;
-	background-color: #241f1d;
+	color: #27D8CF;
+	background-color: #888;
 }
 
 div#finder {
-	background: #3f4339 url(finder-default.png) repeat-x;
 	padding: 6px 25px;
 }
 
@@ -238,10 +250,13 @@ div#promo {
 
 div#promo p {
 	font-size: 13px;
+	font-weight: bold;
+	font-style: italic;
 }
 
 div#go {
 	float: right;
+	margin-top: 5px;
 }
 
 div#go input {
@@ -252,10 +267,15 @@ div#go input {
 div#go input.field {
 	color: #fff;
 	font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background: #595b53 url(field-default.png) repeat-x;
+	background: #595b53;
 	width: 250px;
 	padding: 4px;
 	border: 1px solid #93908f;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	
+	
 }
 
 /* @end */
@@ -263,9 +283,9 @@ div#go input.field {
 /* @group Index / Collection / Search */
 
 div#intro, div#heading, div#collections-listing h2 {
-	background: none repeat scroll 0 0 #0F0F0F;
+	background: none;
 	padding: 0 15px 10px;
-	border-bottom: 1px solid #e3e3e3;
+	border: none;
 }
 
 div#intro h1.title, div#heading h1, div#collections-listing h2 {
@@ -902,15 +922,19 @@ div#sortable div.end {
 }
 
 div.filter h3 {
-	color: #fff;
+	color: white;
 	font-size: 14px;
-	background-color: #26201e;
+	background-color: #333;
 	padding: 8px 10px 9px 34px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	
+	
 }
 
 div.filter ul, div.filter div {
-	background: url(filter-default.png) no-repeat;
-	padding: 9px 0 0 34px;
+	padding: 9px 0 0 30px;
 }
 
 div.filter li {
@@ -924,15 +948,18 @@ div.filter li a {
 	padding: 4px 10px;
 	border-bottom: 1px solid #e3e3e3;
 	display: block;
+	background: #595E53;
 }
 
 div.filter li a:hover {
-	color: #888;
+	color: #27D8CF;
+	background: #888;
 	text-decoration: none;
 }
 
 div.filter li a.active, div.filter li a.active:hover {
-	color: #53c200;
+	color: #27D8CF;
+	background: #888;
 }
 
 div.filter p {
@@ -965,10 +992,6 @@ div#sidebar p {
 
 div#posts div.post p {
 	padding: 0 0 15px;
-}
-
-div#sidebar a {
-	color: #251f1e;
 }
 
 div#posts, div#excerpt {
@@ -1043,16 +1066,32 @@ div#featured div.title h6 {
 div#store-info{
 	padding: 10px;
 	width: 180px;
+	font-weight: bold;
 }
 
-div#store-info td {
-    padding: 5px 0px;
+div#store-info a {
+	color: #444;
+}
+
+div#store-info a:hover {
+	color: #27D8CF;
+	text-decoration: underline;
 }
 
 div#store-info th {
-    padding: 10px 0px;
+    padding: 20px 10px;
     font-weight: bold;
 }    
+
+div#store-info td {
+    padding: 5px 10px;
+}
+
+div#store-info td.small {
+    font-size: 75%;
+	padding: 12px 10px 0px 10px;
+}
+
 
 /* @group Footer */
 
